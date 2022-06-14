@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Frontend for Holzkette
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and React-Admin.
+
+> **_NOTE:_**  This repository is PUBLIC. That means NEVER INCLUDE ANY SECRETS such as API-Keys or Passwords in the code!
 
 ## Available Scripts
 
