@@ -6,11 +6,16 @@ export const supabaseDataProvider = (
     resources: ResourcesOptions
 ): DataProvider => ({
     getList: async (resource, params) => {
+
+        console.log('getList', resource);
+
         const resourceOptions = getResourceOptions(resource, resources);
         return getList({ client, resource, resourceOptions, params });
     },
     getOne: async (resource, { id }) => {
         const resourceOptions = getResourceOptions(resource, resources);
+
+        console.log('getOne', resource);
 
         const { data, error } = await client
             .from(resourceOptions.table)
@@ -29,6 +34,9 @@ export const supabaseDataProvider = (
         return { ...data, id: data[resourceOptions.primaryKey] };
     },
     getMany: async (resource, { ids }) => {
+
+        console.log('getMany', resource);
+
         const resourceOptions = getResourceOptions(resource, resources);
 
         const { data, error } = await client
